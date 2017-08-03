@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			注册
+		</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sign_up.css"/>
+		<script src="js/sing_up.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body background="img/背景.jpg">
+		<form method="post" id="myForm">
+			<table class="tablea">
+				<tbody>
+					<th colspan="2">
+						注册
+					</th>
+					<!--用户名-->
+					<tr>
+						<td align="right">
+							<label for="username">用户名：</label>
+						</td>
+						<td>
+							<input type="text" class="text" onkeydown="next(this.form)" name="username" id="username" placeholder="请输入您要注册的用户名"
+						</td>
+					</tr>
+					<!--密码-->
+					<tr>
+						<td align="right">
+							<label for="userpass">密码：</label>
+						</td>
+						<td>
+							<input type="password"  onkeydown="next(this.form)" class="userpass" name="userpass" id="userpass" placeholder="请输入您的密码" />
+						</td>
+					</tr>
+					<!--再次输入-->
+					<tr>
+						<td align="right">
+							<label for="reuserpass">再次输入密码：</label>
+						</td>
+						<td>
+							<input type="password" class="userpass" onkeydown="next(this.form)"  name="reuserpass" id="reuserpass" placeholder="请输入您的密码" />
+						</td>
+					</tr>
+				<!--email-->
+				<tr>
+					<td align="right"><label for="useremail">邮箱：</label></td>
+					<td><input type="email" class="email" onkeydown="next(this.form)" name="useremail" id="useremail" placeholder="用于登录和找回密码"/></td>
+				</tr>
+				<!--兴趣-->
+				<tr>
+					<td align="right">兴趣：</td>
+					<td>
+
+						<label for="checkbox1">运动</label><input type="checkbox"  value="run" id="checkbox1"/>
+						<label for="checkbox2">科技</label><input type="checkbox" value="tech" id="checkbox2"/>
+						<label for="checkbox3">其他</label><input type="checkbox" value="other" id="checkbox3"/>
+					</td>
+				</tr>
+				<!--性别-->
+				<tr>
+					<td align="right">性别:</td>
+					<td>
+						<label for="rediosex1">男</label><input type="radio" id="rediosex1" name="rediosex"/>
+						<label for="rediosex2">女</label><input type="radio" id="rediosex2" name="rediosex"/>
+					</td>
+				</tr>
+
+				<!--提交-->
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit"  value="注册" id="submit"/>
+					</td>
+				</tr>
+
+				</tbody>
+
+			</table>
+
+		</form>
+
+	</body>
+</html>

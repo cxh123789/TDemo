@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			表格界面
+		</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/table.css"/>
+	</head>
+	<body>
+		<table id="myTable">
+			<tbody>
+				<th colspan="4">
+					<font color="coral">用户管理系统</font>
+				</th>
+				
+			
+			
+				<tr align="center">
+					<td class="header">用户名</td>
+					<td class="header bigtd">地址</td>
+					<td class="header ">电话</td>
+					<td class="header remark">备注</td>
+					<td class="header operation">操作</td>
+				</tr>
+				<tr class="tr-one">
+					<td>Tom</td>
+					<td class="bigtd">济南市长清区大学路0001号</td>
+					<td >123789</td>
+					<td class="remark"></td>
+					<td class="operation"><button type="button">修改</button>
+						<button type="button">删除</button></td>
+				</tr>
+				<tr class="tr-two">
+					<td>Jack</td>
+					<td class="bigtd">北京市东城区前门大街0001号</td>
+					<td >123456</td>
+					<td></td>
+					<td class="operation"><button type="button">修改</button>
+						<button type="button">删除</button></td>
+				</tr>
+				<tr class="tr-one">
+					<td>Linda</td>
+					<td class="bigtd">南京市栖霞区玄武大道0001号</td>
+					<td >123678</td>
+					<td></td>
+					<td class="operation"><button type="button">修改</button>
+						<button type="button">删除</button></td>
+					
+				</tr>
+				<tr class="tr-two">
+					<td>Maria</td>
+					<td class="bigtd">深圳市罗湖区深南东路0001号</td>
+					<td >123567</td>
+					<td></td>
+					<td class="operation"><button type="button">修改</button>
+						<button type="button">删除</button></td>
+				</tr>
+				<tr id="last" align="center">
+					<td><button>首页</button></td>
+					<td><button>查询</button></td>
+					<td><input type="text"/> 
+						<button>跳转</button>
+					</td>
+					<td><button>上一页</button>
+						<button>下一页</button></td>
+				</tr>
+			</tbody>
+			
+		</table>
+		<!--
+        	作者：cxh2921@gmail.com
+        	时间：2017-08-03
+        	描述：在页面直接修改界面。
+        -->
+		<!--<script type="text/javascript">
+			function tableBlurOperator(event){
+				let tdValue = event.target.value;
+				event.target.parentElement.innerHTML = tdValue;
+				
+			}
+			function tableClickOperator(event){
+				if(event.target.tagName != "TH"){
+					let input = document.createElement("input");
+					input.type = "text";
+					input.value = event .target.innerHTML;
+					event.target.innerHTML = "";
+					event.target.appendChild(input);
+					input.focus();
+					input.addEventListener("blur",tableBlurOperator,false);
+					
+				}
+			}
+			function init(){
+				document.getElementById("myTable").addEventListener("click",tableClickOperator,false);
+			}
+			window.addEventListener("load",init,false);
+		</script>-->
+	</body>
+</html>
