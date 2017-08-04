@@ -57,15 +57,23 @@
 					<td class="operation"><button type="button">修改</button>
 						<button type="button">删除</button></td>
 				</tr>
-				<tr id="last" align="center">
-					<td><button>首页</button></td>
-					<td><button>查询</button></td>
-					<td><input type="text"/> 
-						<button>跳转</button>
+				<tfoot>
+				<tr>
+					<td colspan="5">
+						<div id="crudOperation">
+							<button type="button">新增</button>
+						</div>
+						<div id="pageOperation">
+							<button type="button" style="margin:5px 1px;">1</button>
+							<button type="button" style="margin:5px 1px;">2</button>
+							<button type="button" style="margin:5px 1px;">3</button>
+							<button type="button" style="margin:5px 1px;">4</button>
+							<button type="button" style="margin:5px 1px;">5</button>
+							<input type="text" id="" style="width:15px"><button type="button"  style="margin:5px 1px;">go</button>
+						</div>
 					</td>
-					<td><button>上一页</button>
-						<button>下一页</button></td>
 				</tr>
+			</tfoot>
 			</tbody>
 			
 		</table>

@@ -14,6 +14,12 @@ td{
 	width: 30%;
 	height: 30px;
 }
+#crudOperation{
+	float: left;
+}
+#pageOperation{
+	float: right;
+}
 
 table{
 	
