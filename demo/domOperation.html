@@ -1,0 +1,46 @@
+<!--
+	作者：cxh2921@gmail.com
+	时间：2017-08-04
+	描述：dom 添加删除替换练习
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM练习</title>
+		<script type="text/javascript">
+			function domDome (){
+			document.getElementById("btnAddition").addEventListener("click",()=>{
+				var node=document.getElementById("divTest").lastElementChild;//获得子节点也就是p
+				var a=document.createElement("a");//创建a标签
+				a.id = "dome";
+				a.href = "www.baidu.com";
+				a.innerHTML = "<span style='color:#FFFF00'>dom添加的超链接啊</span>"
+				document.getElementById("divTest").insertBefore(a,node);//p 插入一个子节点
+				//Node.insertBefore() 方法，在当前节点的某个子节点之前再插入一个子节点。
+			},false);
+			
+			document.getElementById("btnDelete").addEventListener("click",()=>{
+				var a =document.getElementById("dome");
+				a.parentElement.removeChild(a);//获取a标签的父节点，然后删除它的子节点也就是a
+
+			},false);
+			document.getElementById("btnReplace").addEventListener("click",()=>{
+				var reple =document.getElementById("dome");
+				var texts = document.createElement("input");
+				reple.parentElement.replaceChild(texts,reple);//获取a标签的父节点，然后删除它的子节点也就是a
+			
+			},false);
+			}
+			window.addEventListener("load",domDome,false);
+		</script>
+	</head>
+	<body>
+		<div id="divTest">
+			<p></p>
+		</div>
+		<button type="button" id="btnAddition">新增</button>
+		<button type="button" id="btnDelete">删除</button>
+		<button type="button" id="btnReplace">替换</button>
+	</body>
+</html>
