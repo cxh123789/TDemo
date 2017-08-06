@@ -7,8 +7,41 @@
 		</title>
 		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/table.css"/>
+		<script src="../js/table.js"></script>
 	</head>
 	<body>
+		<section id="section_addUser" hidden>
+			<fieldset id="">
+				<legend hidden>新增用户</legend>
+				<table id="addTable" class="addTable">
+					<tbody>
+						<tr>
+							<td><label for="add_username">用户名：</label></td>
+							<td><input type="text" name="userName" id="add_username"></td>
+						</tr>
+						<tr>
+							<td><label for="add_address">地&nbsp;&nbsp;址：</label></td>
+							<td><input type="text" name="address" id="add_address"></td>
+						</tr>
+						<tr>
+							<td><label for="add_phoneNumber">电&nbsp;&nbsp;话：</label></td>
+							<td><input type="text" name="phone" id="add_phoneNumber"></td>
+						</tr>
+						<tr>
+							<td><label for="add_remark">备&nbsp;&nbsp;注：</label></td>
+							<td><input type="text" name="phone" id="add_remark"></td>
+						</tr>
+						<tr>
+							<td colspan="2"><button>取消</button><button id="add_btn_addUser">提交</button></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</fieldset>
+		</section>
+
+		<section id="section_tableUser">
+
 		<table id="myTable">
 			<tbody>
 				<th colspan="4">
@@ -18,50 +51,54 @@
 			
 			
 				<tr align="center">
+					<td class=" header check" id="checks"><input type="checkbox"  value="" /></td>
 					<td class="header">用户名</td>
 					<td class="header bigtd">地址</td>
 					<td class="header ">电话</td>
 					<td class="header remark">备注</td>
-					<td class="header operation">操作</td>
+					
 				</tr>
-				<tr class="tr-one">
+				<tr class="tr-one" id="row_1">
+					<td class="check" id="checks"><input type="checkbox" name="checks" value="1" /></td>
 					<td>Tom</td>
 					<td class="bigtd">济南市长清区大学路0001号</td>
 					<td >123789</td>
 					<td class="remark"></td>
-					<td class="operation"><button type="button">修改</button>
-						<button type="button">删除</button></td>
+
 				</tr>
-				<tr class="tr-two">
+				<tr class="tr-two" id="row_2">
+					<td class="check"  id="checks"><input type="checkbox" name="checks" value="2" /></td>
 					<td>Jack</td>
 					<td class="bigtd">北京市东城区前门大街0001号</td>
 					<td >123456</td>
 					<td></td>
-					<td class="operation"><button type="button">修改</button>
-						<button type="button">删除</button></td>
+
 				</tr>
-				<tr class="tr-one">
+				<tr class="tr-one" id="row_3">
+					<td class="check"  id="checks"><input type="checkbox" name="checks" value="3" /></td>
 					<td>Linda</td>
 					<td class="bigtd">南京市栖霞区玄武大道0001号</td>
 					<td >123678</td>
 					<td></td>
-					<td class="operation"><button type="button">修改</button>
-						<button type="button">删除</button></td>
+
 					
 				</tr>
-				<tr class="tr-two">
+				<tr class="tr-two"id="row_4">
+					<td class="check"  id="checks"><input type="checkbox" name="checks" value="4" /></td>
 					<td>Maria</td>
 					<td class="bigtd">深圳市罗湖区深南东路0001号</td>
 					<td >123567</td>
 					<td></td>
-					<td class="operation"><button type="button">修改</button>
-						<button type="button">删除</button></td>
+
 				</tr>
 				<tfoot>
 				<tr>
 					<td colspan="5">
 						<div id="crudOperation">
-							<button type="button">新增</button>
+							<button type="button" id="btnAddition">新增</button>
+						</div>
+						<div id="delOperation">
+							<button type="button" id="btnDelete">删除</button>
 						</div>
 						<div id="pageOperation">
 							<button type="button" style="margin:5px 1px;">1</button>
@@ -77,6 +114,8 @@
 			</tbody>
 			
 		</table>
+		</section>
+		
 		<!--
         	作者：cxh2921@gmail.com
         	时间：2017-08-03

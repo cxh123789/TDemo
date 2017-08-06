@@ -9,7 +9,12 @@ td{
 	width: 15%;
 	height: 30px;
 }
-
+#delOperation{
+	margin-left: 8%;
+}
+.check{
+	width: 5%;
+}
 .bigtd{
 	width: 30%;
 	height: 30px;
