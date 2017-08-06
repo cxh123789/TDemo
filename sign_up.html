@@ -9,8 +9,8 @@
 		<link rel="stylesheet" type="text/css" href="css/sign_up.css"/>
 		<script src="js/sing_up.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			function hobbiesInit (){
-				var xhr = new XMLHttpRequest(); //创建异步对象；
+			/*function hobbiesInit (){
+				let xhr = new XMLHttpRequest(); //创建异步对象；
 				xhr.open("POST","data/hobby.json",true );//2,异步提交对象初始化
 				//3.设置相应函数
 				xhr.addEventListener("readystatechange",function(){
@@ -18,17 +18,50 @@
 					//每当 readyState 改变时，就会触发 readystatechange 事件
 					if(xhr.readyState == 4 && xhr.status ==200){
 					//4是请求已完成 200 是ok
-					var json = JSON.parse(xhr.responseText);
+					let json = JSON.parse(xhr.responseText);
 					//解析一个JSON字符串，可选地转换生成的值及其属性，并返回值
-					var node = document.getElementById("hobbies");
-					var option document.createElement("option");//选择列表
+					let node = document.getElementById("hobbies");
+					let option document.createElement("option");//选择列表
 					option.value="00";
 					option.selected=true;
-					node.appendChild("option")
+					node.appendChild("option");
+					if(json.result =="ok"){
+						json.list.froEach((item)=>{
+							if(item.code.length ==2){
+									let option=document.createElement("option");
+							}
+						})
+						
+					}
 					}
 				},false);
 				
+			}*/
+			function cuserNmer () {
+				let xhr =new XMLHttpRequest();
+				xhr.open("GET","data/user.json",true);
+				xhr.addEventListener("readystatechange",()=>{
+					if(xhr.readyState == 4 && xhr.status ==200){
+						let json =JSON.parse(xhr.responseText);
+						let node =document.getElementById("username");
+						let sc= document.getElementById("username").value;
+						if(json.result =="ok"){
+							json.list.forEach((item)=>{
+								if(item.code ==sc){
+									let sp =document.createElement("username");
+									sp.style.backgroundColor=green;
+									
+								}else{
+									let sp =document.createElement("username");
+									sp.style.backgroundColor=red;
+								}
+							})
+						}
+					}
+				},false);
+				xhr.send(null);
 			}
+			window.addEventListener("load",init,false);
 		</script>
 	</head>
 	<body background="img/背景.jpg">
