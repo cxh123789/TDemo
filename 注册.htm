@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="%E6%B3%A8%E5%86%8C_files/register.css">
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/register.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<section>
+		<fieldset id="">
+			<h1>用户信息注册</h1>
+			<legend hidden="">用户注册</legend>
+				<form action="" method="post" id="myForm">
+					<table>
+						<tbody><tr>
+							<td><label for="userName">用户名：</label></td>
+							<td><input name="userName" id="userName" type="text"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><label for="password">密码：</label></td>
+							<td><input name="password" id="password" type="password"></td>
+							<td>
+								<div id="passwordImage"></div>
+								<span id="passwordMessage"></span>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="rePassword">重复密码：</label></td>
+							<td><input name="rePassword" id="rePassword" type="password"></td>
+							<td>
+								<div id="rePasswordImage"></div>
+								<span id="rePasswordMessage"></span>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="email">email：</label></td>
+							<td><input name="email" id="email" value="adfd@com.cn" type="text"></td>
+							<td>
+								<div id="emailImage" class="successImage"></div>
+								<span id="emailMessage" class="successColor">邮箱地址格式正确！</span>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="email">来自于：</label></td>
+							<td colspan="2">
+								<select id="province"><option value="00">请选择省份</option><option value="37">山东</option><option value="01" selected="selected">北京</option></select>&nbsp;&nbsp;
+								<select id="city"><option value="00">请选择城市</option><option value="0101" selected="selected">西城区</option></select>
+							</td>
+
+						</tr>
+					</tbody></table>
+					<nav id="navOperation">
+						<button type="reset">清空</button>
+						<button type="submit">注册</button>
+					</nav>
+				</form>
+		</fieldset>
+		</section>
+	
+
+</body></html>

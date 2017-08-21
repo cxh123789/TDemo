@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片</title>
+	</head>
+	<body>
+		<canvas id="c" width="200" height="400"></canvas>
+		
+		<script>
+			let c = document.querySelector("#c")//返回文档中匹配指定CC器的一个元素
+			let ctx = c.getContext("2d");//22
+			var image = new Image();
+			image.onload = function() {
+				console.log("Loaded image");
+				ctx.drawImage(image, 0, 0, c.width, c.height);
+				let saveImage = c.toDataURL();
+							
+			}
+			image.src = "../img/44.jpg";
+			ctx.fillStyle = "red";
+			ctx.fillText("hello" ,10 ,10);
+         	
+         
+		</script>
+	</body>
+</html>
